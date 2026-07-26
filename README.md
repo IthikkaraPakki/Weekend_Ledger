@@ -1,15 +1,14 @@
 # Weekend Time Ledger — PWA
 
-Your original component, ported into a standalone installable PWA. No server, no
+This is a weekend time tracker ported into a standalone installable PWA. No server, no
 backend, no accounts — all data lives in the browser's `localStorage` on
 whichever device you install it on.
 
-## What changed vs. the original file
+## What it contains
 
-- `window.storage.get/set` (a Claude-artifact-only API) is now backed by real
-  `localStorage` via `src/storagePolyfill.js`. The component itself
-  (`src/WeekendTimeLedger.jsx`) is untouched — same logic, same UI.
-- Added a manifest + service worker (`vite-plugin-pwa`) so it can be
+- `Backed by real
+  `localStorage` via `src/storagePolyfill.js`. 
+- A manifest + service worker (`vite-plugin-pwa`) so it can be
   "installed" on your phone/desktop and works offline.
 - **Data does not sync between devices.** Install it on your phone, and your
   phone has its own ledger. This matches how the original worked (per-browser
